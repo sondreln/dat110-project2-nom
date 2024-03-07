@@ -98,15 +98,15 @@ The `no.hvl.dat110.messages` package already contains classes implementing the f
 
 You are required to complete the implementation of the remaining message-classes.
 
-- `CreateTopicMsg.java` - sent by the client in order to have the broker create a `topic`. A topic is to be identified by means of a `String`
+- [x] `CreateTopicMsg.java` - sent by the client in order to have the broker create a `topic`. A topic is to be identified by means of a `String`
 
-- `DeleteTopicMsg.java` - sent by the client in order to have a `topic` deleted.
+- [x] `DeleteTopicMsg.java` - sent by the client in order to have a `topic` deleted.
 
-- `SubscribeMsg.java` - sent by the client in order to subscribe to a `topic`.
+- [x] `SubscribeMsg.java` - sent by the client in order to subscribe to a `topic`.
 
-- `UnsubscribeMsg.java` - sent by the client in order to unsubscribe from a `topic`.
+- [x] `UnsubscribeMsg.java` - sent by the client in order to unsubscribe from a `topic`.
 
-- `PublishMsg.java` - sent by the client in order to publish a `message` (`String`) on a topic and sent by the broker in order to deliver the message to subscribed clients.
+- [x] `PublishMsg.java` - sent by the client in order to publish a `message` (`String`) on a topic and sent by the broker in order to deliver the message to subscribed clients.
 
 You must determine by considering the role of the message what object variables are needed in the classes, i.e., what information the given message need to contain.  The message-classes must have a constructor that can give a value to all object-variables, getter/setter methods for all object-variables, and they must implement a `toString`-method to be used for logging purposes.
 
@@ -192,19 +192,19 @@ The broker data model for the storage is illustrated below
 
 You are required to complete the implementation of the following methods in the `Storage.java` class:
 
-- `public void addClientSession(String user, Connection connection)`
+- [x] `public void addClientSession(String user, Connection connection)`
 
-- `public void removeClientSession(String user)`
+- [x] `public void removeClientSession(String user)`
 
-- `public void createTopic(String topic)`
+- [x] `public void createTopic(String topic)`
 
-- `public void deleteTopic(String topic)`
+- [x] `public void deleteTopic(String topic)`
 
-- `public void addSubscriber(String user, String topic)`
+- [x] `public void addSubscriber(String user, String topic)`
 
-- `public void removeSubscriber(String user, String topic)`
+- [x] `public void removeSubscriber(String user, String topic)`
 
-- `public Set<String> getSubscribers(String topic)`
+- [x] `public Set<String> getSubscribers(String topic)`
 
 The TODO-comments in `Storage.java` class provides more detailed information about what the individual methods are supposed to do.
 
@@ -230,15 +230,15 @@ The aim of this task it to implement the broker-side processing of the messages 
 
 The dispatcher already contains an implementation of the `onConnect` and on `onDisconnect`-methods. Your task is to complete the implementation of the remaining methods in [Dispatcher.java](https://github.com/selabhvl/dat110-project2-startcode/blob/master/src/no/hvl/dat110/broker/Dispatcher.java)
 
-- `public void onCreateTopic(CreateTopicMsg msg)`
+- [x] `public void onCreateTopic(CreateTopicMsg msg)`
 
-- `public void onDeleteTopic(DeleteTopicMsg msg)`
+- [x] `public void onDeleteTopic(DeleteTopicMsg msg)`
 
-- `public void onSubscribe(SubscribeMsg msg)`
+- [x] `public void onSubscribe(SubscribeMsg msg)`
 
-- `public void onUnsubscribe(UnsubscribeMsg msg)`
+- [x] `public void onUnsubscribe(UnsubscribeMsg msg)`
 
-- `public void onPublish(PublishMsg msg)`
+- [x] `public void onPublish(PublishMsg msg)`
 
 in order to be able to also process the remaining types of messages.
 

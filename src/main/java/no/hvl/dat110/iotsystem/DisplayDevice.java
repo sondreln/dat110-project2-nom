@@ -18,17 +18,31 @@ public class DisplayDevice {
 		// create a client object and use it to
 		
 		// - connect to the broker - use "display" as the username
+		Client client = new Client("display", "localhost", 8080);
+		client.connect();
+
 		// - create the temperature topic on the broker
+		client.createTopic("temperature");
+
 		// - subscribe to the topic
+		client.subscribe("temperature");
+
 		// - receive messages on the topic
+		for (int i = 0; i < COUNT; i++) {
+			Message message = client.receive();
+			System.out.println(message.toString());
+		}
 		// - unsubscribe from the topic
+		client.unsubscribe("temperature");
+
 		// - disconnect from the broker
+		client.disconnect();
 		
 		// TODO - END
 		
 		System.out.println("Display stopping ... ");
 		
-		throw new UnsupportedOperationException(TODO.method());
+		//throw new UnsupportedOperationException(TODO.method());
 		
 	}
 }
